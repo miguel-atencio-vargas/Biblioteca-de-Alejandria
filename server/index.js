@@ -15,9 +15,9 @@ mongoose.connect(uriDB, {
         useFindAndModify: false
     })
     .then(() => {
-        console.log(`Conexión establecida en ${uriDB}`);
+        console.log(`Conexión establecida con la base de datos`);
         app.listen(port, () => {
-            console.log(`Server running on http://localhost:${port}`);
+            console.log(`Server running `);
         });
     })
     .catch((e) => {

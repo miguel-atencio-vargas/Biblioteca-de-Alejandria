@@ -49,7 +49,6 @@ function login(req, res) {
 
 async function checkUser(userEmail, password) {
     let userDB = await User.find({ email: userEmail }, 'password email');
-    console.log('userDB:', userDB);
     if (userDB.length > 0) {
         let match = await bcrypt.compare(password, userDB[0].password);
         if (match) {
